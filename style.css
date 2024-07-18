@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fonts */
+
+.div-header {
+  /* display: flex;
+  justify-content: space-between; */
+  height: 34px;
+  background-color: black;
+  width: auto;
+  font-family: Geologica;
+  font-weight: 300;
+  font-size: 15px;
+  position: relative;
+}
+
+.toggle-card {
+  /* flex: 0 0 auto;
+  margin: 0 auto; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateX(0);
+}
+
+.header-navigator-card {
+  display: flex;
+  gap: 21px;
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 3px;
+  right: 11px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.fade-out {
+  animation: fadeOutUp 0.5s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.svg-icon-color-transparent {
+  filter: brightness(0) invert(1); /* Adjust the color properties */
+  background-color: transparent; /* Ensure the background is transparent */
+  display: inline-block; /* Ensure the background color is applied correctly */
+  cursor: pointer;
+}
+
+.btn-icon {
+  background-color: transparent; /* Make sure the button's background is transparent */
+  border: none; /* Remove any default button borders */
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.links a {
+  position: relative;
+  color: #333; /* Default link color */
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+li {
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+.links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px; /* Height of the underline */
+  width: 100%;
+  background-color: transparent; /* Initially transparent */
+  transition: background-color 0.3s ease; /* Smooth transition for underline */
+}
+
+.links a.active::after {
+  background-color: #333; /* Color of the underline for the active link */
+}
+
+.links:first-child a:first-child::after {
+  background-color: #252525;
+}
+
+/* .links a:hover::after {
+  background-color: #333; 
+} */
+
+.links a.active {
+  background-color: lightgrey; /* Background color for the active link */
+}
+
+.links a:hover:not(.active) {
+  background-color: rgb(
+    228,
+    225,
+    225
+  ); /* Background color for non-active links on hover */
+}
+
+.content-nav-li {
+  color: #505050;
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0px 30px;
+}
+
+.content-nav-li span::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Start from the middle */
+  bottom: 0;
+  width: 0; /* Initially zero width */
+  height: 4px; /* Height of the underline */
+  background-color: transparent; /* Initially transparent */
+  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
+}
+
+/* .content-nav-li:hover{
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease; 
+} */
+
+.content-nav-li span:hover::after {
+  left: 0; /* Move to the left edge */
+  width: 100%; /* Full width on hover */
+  background-color: #333; /* Color of the underline */
+}
+
+.content-nav-li span {
+  white-space: nowrap; /* Ensures text stays on one line */
+  display: inline-block; /* Ensures block-level properties */
+  z-index: 1; /* Ensure text is above the underline */
+}
+
+.hero-section {
+  background-image: url('./assets/img/heroImage.png');
+  height: 79vh;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: max(1200px, 100vw);
+}
+
+.hero-section {
+  position: relative;
+}
+.promo-container {
+  width: 350px;
+  padding: 30px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  font-family: Raleway;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.promo-container2 {
+  width: 160px;
+  padding: 30px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  right: 12%;
+  font-family: Raleway;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.headlineText {
+  font-size: 25px;
+  color: #505050;
+}
+.subText {
+  font-size: 15px;
+}
+
+.catLink a {
+  border: 1px solid black;
+  border-radius: 24px;
+  padding: 7px 32px;
+  font-weight: 500;
+}
+
+.products-section {
+  width: 80%;
+  margin-inline: auto;
+  border-bottom: 1px solid #e4e3e3;
+  padding: 40px 0px;
+
+  /* background-color: #505050; */
+}
+
+.prod-category {
+  display: flex;
+  height: 65px;
+  gap: 30px;
+  font-family: Raleway;
+  margin: 30px 0px;
+  border-bottom: 1px solid #e4e3e3;
+
+}
+.prod-category div {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.prod-category div::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px; /* Height of the underline */
+  width: 100%;
+  background-color: transparent; /* Initially transparent */
+  transition: background-color 0.3s ease; /* Smooth transition for underline */
+}
+
+.prod-category div:first-child::after {
+  background-color: #252525;
+} 
+
+.prod-category div p{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(15px);
+}
+
+.product{
+  display: flex;
+}
+
+.prod-desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: Raleway;
+  width: 180px;
+}
+
+.actual-price {
+  text-decoration: line-through;
+  color: #999; /* Gray color for strikethrough */
+}
+
+
+.buy-now, .add-to-cart {
+  background-color: #ccc; /* Light grey background */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+  margin-right: 10px; /* Margin between buttons */
+}
+
+.buy-now:hover, .add-to-cart:hover {
+  background-color: #999; /* Darker grey background on hover */
+}
+
+.prod-img{
+  display: flex;
+  justify-content: center;
+}
+
+
+footer {
+  max-width: 60vw;
+  margin: auto;
+  padding: 14px;
+  font-family: Raleway;
+}
+
+.questions {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 30px 30px 30px 0px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+input[type="email"] {
+  border: none;
+  outline: none; /* Remove default focus outline */
+  padding: 8px 0; /* Adjust padding for better appearance */
+  border-bottom: 1px solid #ccc; /* Bottom border */
+  font-size: 12px; /* Adjust font size as needed */
+  width: 300px; /* Set a specific width or adjust accordingly */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Style the bottom border when input is focused */
+input[type="email"]:focus {
+  border-bottom-color: #ccc; /* Change color on focus */
+}
+
+.main-1{
+font-weight: 700;
+font-size: 15px;
+color: #505050;
+}
+
+.sub-content{
+  font-size: 13px;
+color: #505050;
+}
