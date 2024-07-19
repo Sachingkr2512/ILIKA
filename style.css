@@ -185,9 +185,9 @@ li {
 }
 
 .hero-section {
-  background-image: url('./assets/img/heroImage.png');
+  background-image: url('./assets/img/image1.jpeg');
   height: 79vh;
-  /* background-position: center; */
+  background-position: center;
   background-repeat: no-repeat;
   background-size: max(1200px, 100vw);
 }
@@ -201,7 +201,7 @@ li {
   background-color: white;
   position: absolute;
   bottom: 0;
-  left: 12%;
+  left: 3%;
   font-family: Raleway;
   display: flex;
   flex-direction: column;
@@ -282,6 +282,7 @@ li {
 
 .product{
   display: flex;
+
 }
 
 .prod-desc{
@@ -315,6 +316,7 @@ li {
 .prod-img{
   display: flex;
   justify-content: center;
+  margin-right: 30px;
 }
 
 
